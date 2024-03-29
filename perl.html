@@ -62,19 +62,34 @@
                 overflow: hidden;
             }
     
-                table.Esewa-left-col .well-sm {
-                    padding: 30px;
+            table.Esewa-left-col .well-sm {
+                padding: 30px;
+            }
+
+            table.Esewa-left-col tbody tr th {
+                border: none;
+            }
+            .new-row{
+                display:flex;
+            }
+            #doc-pdf {
+                display: none;
+            }
+            @media screen and (max-width: 600px) {
+                .test123 {
+                    width: 100%;
+                    
                 }
-    
-                table.Esewa-left-col tbody tr th {
-                    border: none;
-                }
+
                 .new-row{
-                    display:flex;
+                    flex-direction: column;
+                    
                 }
-                #doc-pdf {
-                    display: none;
+                #doc-pdf{
+                    width: 100% !important;
                 }
+                }
+            
         </style>
     
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
@@ -122,7 +137,7 @@
                                 <div class="row">
                                     <div class="col-md-12 container center-content">
                                         <div class="row new-row">
-                                            <div class="col-md-4">
+                                            <div class="col-md-4 test123">
                                                 <form ng-submit="SearchDocument()" class="ng-dirty ng-submitted ng-invalid ng-invalid-required">
                                                     <div class="form-group">
                                                         <table class="table Esewa-left-col">
