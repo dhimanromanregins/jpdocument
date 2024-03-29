@@ -77,7 +77,8 @@
                 }
         </style>
     
-    
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
         <link href="https://esewa.punjab.gov.in/ui-assets/plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://esewa.punjab.gov.in/ui-assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://esewa.punjab.gov.in/ui-assets/plugins/Ionicons/css/ionicons.min.css">
@@ -141,7 +142,13 @@
                                                                                     <div class="text-center">
                                                                                         <div class="realperson-challenge" id="output">
                                                                                             
-                                                                                            <div class="realperson-regen"><a><span class="glyphicon glyphicon-refresh"></span>        </a></div></div><input type="text" id="defaultReal" autocomplete="off" ng-model="veriData.recaptcha" class="form-control is-realperson ng-dirty ng-touched ng-empty ng-invalid ng-invalid-required" name="defaultReal">
+                                                                                        </div>
+                                                                                        <div class="realperson-regen">
+                                                                                            <a  id="refreshButton">
+                                                                                                <img src="file:///C:/Users/Lenovo/Downloads/refresh-cw-alt-svgrepo-com.svg" alt="Refresh Icon" width="16" height="16">
+                                                                                            </a>
+                                                                                        </div>
+                                                                                        <input type="text" id="defaultReal" autocomplete="off" ng-model="veriData.recaptcha" class="form-control is-realperson ng-dirty ng-touched ng-empty ng-invalid ng-invalid-required" name="defaultReal">
                                                                                         <input type="hidden" id="defaultRealHashnew" class="form-control" placeholder="enter captcha code" name="defaultRealHashnew" required="" autocomplete="off" value="-1050171429">
                                                                                     </div>
     
@@ -166,7 +173,7 @@
                                             <div className="col-md-4" id="doc-pdf" style="width: 70%; height: 80vh;">
                                                 <iframe
                                                     className="pdf-display perl-preet"
-                                                    src="D:/Jp/files/harsh.pdf"
+                                                    src="http://20.235.152.209/svg/refresh.svg"
                                                     style="width: 100%; height: 100%; display: block;"
                                                 ></iframe>
                                             </div>
@@ -237,6 +244,11 @@ document.getElementById('submit').addEventListener('click', () => {
     if (existing_value === value){
         document.getElementById('doc-pdf').style.display = 'block'
     };
+});
+
+document.getElementById('refreshButton').addEventListener('click', function() {
+    // Reload the page when the image is clicked
+    location.reload();
 });
 </script>
         <style>
