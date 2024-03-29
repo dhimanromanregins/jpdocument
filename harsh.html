@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><meta http-equiv="origin-trial" content="Az520Inasey3TAyqLyojQa8MnmCALSEU29yQFW8dePZ7xQTvSt73pHazLFTK5f7SyLUJSo2uKLesEtEa9aUYcgMAAACPeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IkRpc2FibGVUaGlyZFBhcnR5U3RvcmFnZVBhcnRpdGlvbmluZyIsImV4cGlyeSI6MTcyNTQwNzk5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <title>E-Sewa, Punjab</title>
+        <style>
+            [ng\:cloak],
+            [ng-cloak],
+            [data-ng-cloak],
+            [x-ng-cloak],
+            .ng-cloak,
+            .x-ng-cloak {
+                display: none !important;
+            }
+    
+            .pdfobject-container {
+                height: 500px !important;
+            }
+    
+            .pdfobject {
+                border: 1px solid #666;
+            }
+    
+            .navbar-brand {
+                padding: 5px 5px !important;
+            }
+    
+            input {
+                border: 0;
+                outline: 0;
+                background: transparent;
+                width: 100%;
+                height: 20px;
+            }
+    
+            #submit {
+                background-color: #3c8dbc;
+                width: 100%;
+            }
+    
+            .center {
+                margin: auto;
+                width: 50%;
+                padding: 10px;
+            }
+    
+            .hide {
+                background-color: black;
+                position: absolute;
+                width: 100%;
+                height: 100%
+            }
+    
+            table.Esewa-left-col tbody tr th,
+            table.Esewa-left-col tbody tr td {
+                padding: 8px 0;
+            }
+    
+            table.Esewa-left-col {
+                overflow: hidden;
+            }
+    
+                table.Esewa-left-col .well-sm {
+                    padding: 30px;
+                }
+    
+                table.Esewa-left-col tbody tr th {
+                    border: none;
+                }
+                .new-row{
+                    display:flex;
+                }
+                #doc-pdf {
+                    display: none;
+                }
+        </style>
+    
+    
+        <link href="https://esewa.punjab.gov.in/ui-assets/plugins/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://esewa.punjab.gov.in/ui-assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://esewa.punjab.gov.in/ui-assets/plugins/Ionicons/css/ionicons.min.css">
+        <link rel="stylesheet" href="https://esewa.punjab.gov.in/ui-assets/plugins/sweetalert/lib/sweet-alert.css">
+        <link href="https://esewa.punjab.gov.in/ui-assets/Assets_PEA/css/PunjabEA_Website_Custom_Style_V1.0.css" rel="stylesheet">
+        <link href="https://esewa.punjab.gov.in/ui-assets/css/Custom.css" rel="stylesheet">
+        <!--JQuery + Bootstrap-->
+        <script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/moV1mTgQ6S91nuTnmll4Y9yf/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-wEVSdqKc5hf9vkWC9kAmVRAEa11o8QNGecO6p5G2xGj+RmQhgDqFDCRdpfSr1VUf"></script><script src="ui-assets/plugins/jquery_3.3.5/jquery.min.js?v3.0"></script>
+        <script src="https://esewa.punjab.gov.in/ui-assets/plugins/bootstrap/dist/js/bootstrap.min.js?v3.0"></script>
+        <!--Angular-->
+        <script src="https://esewa.punjab.gov.in/ui-assets/plugins/angular/v1.7.9/angular.min.js?v3.0"></script>
+        <script src="https://esewa.punjab.gov.in/ui-assets/plugins/angular/angular-idle.js?v3.0"></script>
+        <script src="https://esewa.punjab.gov.in/ui-assets/plugins/angular/angular-route.js?v3.0"></script>
+        <script src="https://esewa.punjab.gov.in/ui-assets/plugins/sweetalert/lib/sweet-alert.min.js?v3.0"></script>
+        <!-- Angular Logic -->
+        <script src="https://esewa.punjab.gov.in/ui-assets/scripts/ESewaCustomV1.0.js?v3.0"></script>
+        <script src="https://esewa.punjab.gov.in/ui-assets/plugins/crypto_js/aes.js?v3.0"></script>
+        <script src="https://esewa.punjab.gov.in/app_core/configService.js?v3.0"></script>
+        <script src="https://esewa.punjab.gov.in/app_core/notificationSerices.js?v3.0"></script>
+    
+        <!-- Start Captcha Code Js -->
+        <script src="https://esewa.punjab.gov.in/ui-assets/plugins/captcha_js/jquery.plugin.js?v3.0"></script>
+        <script src="https://esewa.punjab.gov.in/ui-assets/plugins/captcha_js/jquery.realperson.js?v3.0"></script>
+        <link rel="stylesheet" href="https://esewa.punjab.gov.in/ui-assets/plugins/captcha_js/jquery.realperson.css">
+        <script src="https://esewa.punjab.gov.in/ui-assets/plugins/angular-recaptcha/angular-recaptcha.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js?onload=vcRecaptchaApiLoaded&amp;render=explicit" async="" defer=""></script>
+    
+        <!-- Output Verification-->
+        <script src="open_app_modules/certificate_verification_new/outputVerificationFromQR.js?v3.0"></script>
+        <script src="open_app_modules/certificate_verification_new/pdfobject.js?v3.0"></script>
+    
+    </head>
+    <body class="hold-transition skin-blue sidebar-mini ng-scope" ng-app="outputVerificationFromQRModule">
+        <div class="wrapper">
+    
+            <div class="content-wrapper" style="margin-left: 0px;">
+                <div class="content container ng-scope" ng-controller="outputVerificationFromQRCtrl">
+                    <div class="hpanel hblue">
+                        <div class="panel-body">
+                            <div class="form-horizontal">
+                                <div class="row">
+                                    <div class="col-md-12 container center-content">
+                                        <div class="row new-row">
+                                            <div class="col-md-4">
+                                                <form ng-submit="SearchDocument()" class="ng-dirty ng-submitted ng-invalid ng-invalid-required">
+                                                    <div class="form-group">
+                                                        <table class="table Esewa-left-col">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td colspan="5">
+                                                                        <div class="form-group">
+                                                                            <div class="well well-sm">
+                                                                                <div class="text-center">
+                                                                                    <!--<div vc-recaptcha
+                                                                                    theme="'light'"
+                                                                                    key="userCaptchaInput.key"
+                                                                                    on-create="setWidgetId(widgetId)"
+                                                                                    on-success="setResponse(response)"
+                                                                                    on-expire="cbExpiration()"></div>-->
+    
+                                                                                    <div class="text-center">
+                                                                                        <div class="realperson-challenge" id="output">
+                                                                                            
+                                                                                            <div class="realperson-regen"><a><span class="glyphicon glyphicon-refresh"></span>        </a></div></div><input type="text" id="defaultReal" autocomplete="off" ng-model="veriData.recaptcha" class="form-control is-realperson ng-dirty ng-touched ng-empty ng-invalid ng-invalid-required" name="defaultReal">
+                                                                                        <input type="hidden" id="defaultRealHashnew" class="form-control" placeholder="enter captcha code" name="defaultRealHashnew" required="" autocomplete="off" value="-1050171429">
+                                                                                    </div>
+    
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr>
+                                                                    <td colspan="2">
+                                                                        <button id="submit" class="btn btn-info" id="submit" type="button">Search</button>
+                                                                    </td>
+                                                                </tr>
+                                                            </tfoot>
+    
+                                                        </table>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div className="col-md-4" id="doc-pdf" style="width: 70%; height: 80vh;">
+                                                <iframe
+                                                    className="pdf-display perl-preet"
+                                                    src="D:/Jp/files/harsh.pdf"
+                                                    style="width: 100%; height: 100%; display: block;"
+                                                ></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    
+    
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>
+        <script language="Javascript" type="text/javascript">
+            
+            function isNumberKey(evt) {
+                var charCode = (evt.which) ? evt.which : event.keyCode
+                if (charCode > 31 && (charCode < 48 || charCode > 57))
+                    return false;
+    
+                return true;
+            }
+        </script>
+        <script>
+            function newPage() {
+                window.location.assign("/")
+            }</script>
+
+        <script>
+  const numbers = {
+  "LQV3WD":"<div class='realperson-text'>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*****&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*****&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;******&nbsp;&nbsp;&nbsp;<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;*&nbsp;*&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;**&nbsp;&nbsp;&nbsp;**&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;<br>*******&nbsp;&nbsp;&nbsp;****&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*****&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;******&nbsp;&nbsp;&nbsp;<br></div>",
+  "T996B0":"<div class='realperson-text'>*******&nbsp;&nbsp;&nbsp;*****&nbsp;&nbsp;&nbsp;&nbsp;*****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;******&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;*&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;******&nbsp;&nbsp;&nbsp;******&nbsp;&nbsp;******&nbsp;&nbsp;&nbsp;******&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*****&nbsp;&nbsp;&nbsp;******&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***&nbsp;&nbsp;&nbsp;&nbsp;<br></div>",
+  "07WTDD":"<div class='realperson-text'>&nbsp;*****&nbsp;&nbsp;&nbsp;*******&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*******&nbsp;&nbsp;******&nbsp;&nbsp;&nbsp;******&nbsp;&nbsp;&nbsp;<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;*&nbsp;*&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**&nbsp;&nbsp;&nbsp;**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;<br>&nbsp;*****&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;******&nbsp;&nbsp;&nbsp;******&nbsp;&nbsp;&nbsp;<br></div>",
+  "W0DMNC":"<div class='realperson-text'>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;***&nbsp;&nbsp;&nbsp;&nbsp;******&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*****&nbsp;&nbsp;&nbsp;<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;**&nbsp;&nbsp;&nbsp;**&nbsp;&nbsp;**&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;*&nbsp;*&nbsp;*&nbsp;&nbsp;*&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>*&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>*&nbsp;*&nbsp;*&nbsp;*&nbsp;&nbsp;*&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>**&nbsp;&nbsp;&nbsp;**&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;**&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;<br>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;***&nbsp;&nbsp;&nbsp;&nbsp;******&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;&nbsp;&nbsp;*****&nbsp;&nbsp;&nbsp;<br></div>"
+  };
+
+  let randomPair; // Declare randomPair globally
+
+function getRandomElement(object) {
+    const keys = Object.keys(object);
+    const randomKey = keys[Math.floor(Math.random() * keys.length)];
+    return [randomKey, object[randomKey]];
+}
+
+function addRandomElementToDiv() {
+    const outputDiv = document.getElementById('output');
+    if (!randomPair) { // Check if randomPair is not already set
+        randomPair = getRandomElement(numbers);
+    }
+    const mainValue = randomPair[1];
+    console.log(randomPair[0])
+    outputDiv.innerHTML = mainValue;
+    console.log(randomPair);
+}
+
+// Initial call to populate div when page loads
+addRandomElementToDiv();
+
+// Refresh the div content every time the page is refreshed
+window.addEventListener('load', addRandomElementToDiv);
+
+document.getElementById('submit').addEventListener('click', () => {
+    let value = document.getElementById('defaultReal').value;
+    let existing_value = randomPair[0];
+    if (existing_value === value){
+        document.getElementById('doc-pdf').style.display = 'block'
+    };
+});
+</script>
+        <style>
+            #toolbarViewer {
+                display: none !important;
+            }
+    
+            .toolbar #toolbarContainer div#toolbarViewer {
+                display: none !important; /* hide PDF viewer toolbar */
+            }
+    
+            div#toolbarViewer {
+                top: 0 !important; /* move doc up into empty bar space */
+            }
+        </styl>
+    
+    
+    
+    <div><div class="sweet-overlay" tabindex="-1"></div><div class="sweet-alert" tabindex="-1"><div class="icon error"><span class="x-mark"><span class="line left"></span><span class="line right"></span></span></div><div class="icon warning"> <span class="body"></span> <span class="dot"></span> </div> <div class="icon info"></div> <div class="icon success"> <span class="line tip"></span> <span class="line long"></span> <div class="placeholder"></div> <div class="fix"></div> </div> <div class="icon custom"></div> <h2>Title</h2><p>Text</p><button class="cancel" tabindex="2">Cancel</button><button class="confirm" tabindex="1">OK</button></div></div>
+<div><div class="sweet-overlay" tabindex="-1"></div><div class="sweet-alert" tabindex="-1"><div class="icon error"><span class="x-mark"><span class="line left"></span><span class="line right"></span></span></div><div class="icon warning"> <span class="body"></span> <span class="dot"></span> </div> <div class="icon info"></div> <div class="icon success"> <span class="line tip"></span> <span class="line long"></span> <div class="placeholder"></div> <div class="fix"></div> </div> <div class="icon custom"></div> <h2>Title</h2><p>Text</p><button class="cancel" tabindex="2">Cancel</button><button class="confirm" tabindex="1">OK</button></div></div></body>
+</html>
