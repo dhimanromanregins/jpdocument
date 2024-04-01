@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>API Request Every 10 Seconds</title>
+</head>
+<body>
+  <div id="result"></div>
+  <button onclick="startFetching()">Start Fetching</button>
+
+  <script>
+    let intervalId;
+    let responseDataArray = [];
+
+    function startFetching() {
+      // Call fetchData initially
+      fetchData();
+
+      // Call fetchData every 10 seconds
+      intervalId = setInterval(fetchData, 10000);
+    }
+
+    function fetchData() {
+      // Use fetch or XMLHttpRequest to make API requests
+      fetch('http://52.151.192.152/api/payment/?userId=1234&user_address=0xa6462FFBD9CA38f1267E1323218D024F2d19145f&original_amount=90&success_url=https://www.google.com/index.html&failure_url=http://localhost/multilevel/cancel_payment?&fundpip_wallet_address=0x9D7B6C31938381B2D36Bf2794BA0C45721FF2815')
+        .then(response => response.json())
+        .then(data => {
+          // Store response data in the array
+          responseDataArray.push(data);
+          // Display the result on the page
+          document.getElementById('result').innerText = JSON.stringify(data);
+          // Log the array length every 10 seconds
+          console.log("Array length:", responseDataArray.length);
+
+          // Check if success_url is available
+          if (data.success_url) {
+            // Redirect to the success URL
+            window.location.href = data.success_url;
+          }
+        })
+        .catch(error => console.error('Error fetching data:', error));
+    }
+  </script>
+</body>
+</html>
